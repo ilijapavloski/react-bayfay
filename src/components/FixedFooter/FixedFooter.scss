@@ -1,0 +1,26 @@
+@import "../../styles/colors";
+
+.fixed-footer-container {
+  position: fixed;
+  background: $light-silver;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  border-top: 1px solid $silver;
+  // Ilija's work
+  @media screen and (max-width: 420px) {
+    padding-left: 10px;
+    text-align: left;
+  }
+  // Ilija's work
+}
+
+.powered-by-label {
+  position: absolute;
+  right: 20px;
+  font-size: 0.8rem;
+  @media screen and (max-width: 420px) {
+    right: 10px;
+  }
+};
