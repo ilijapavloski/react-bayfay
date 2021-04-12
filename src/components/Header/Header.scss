@@ -264,23 +264,23 @@
         }
       }
     }
-  }
-  .navbar-brand {
-    margin-left: 110px;
-    margin-right: auto;
-    img {
-      width: 70px;
-      height: 30px;
+    .navbar-brand {
+      margin-left: 110px;
+      margin-right: auto;
+      img {
+        width: 70px;
+        height: 30px;
+      }
     }
-  }
-  .navbar-toggler {
-    position: absolute;
-    left: 0;
-    top: 0;
-    border: none;
-    outline: none;
-    &:focus {
+    .navbar-toggler {
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: none;
       outline: none;
+      &:focus {
+        outline: none;
+      }
     }
   }
 }

@@ -13,6 +13,9 @@
   -webkit-box-shadow: -2px 0px 5px 0px rgb(150, 150, 150);
   -moz-box-shadow: -2px 0px 5px 0px rgb(150, 150, 150);
   box-shadow: -2px 0px 5px 0px rgb(150, 150, 150);
+  @media screen and (max-width: 475px) {
+    width: calc(100% - 20px);
+  }
 }
 
 .modalOpen {

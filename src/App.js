@@ -103,13 +103,13 @@ function App({location}) {
         if (window.location.pathname === '/merchant-policy' || window.location.pathname === '/privacy' || window.location.pathname === '/terms') {
             return;
         }
-        if (/android/i.test(userAgent)) {
-            window.location.href = 'https://play.google.com/store/apps/details?id=com.bayfay.customer';
-        }
+        // if (/android/i.test(userAgent)) {
+        //     window.location.href = 'https://play.google.com/store/apps/details?id=com.bayfay.customer';
+        // }
 
-        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-            window.location.href = 'https://apps.apple.com/in/app/bayfay-shop-from-any-shops/id1463215060';
-        }
+        // if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        //     window.location.href = 'https://apps.apple.com/in/app/bayfay-shop-from-any-shops/id1463215060';
+        // }
     };
 
     useEffect(() => {
