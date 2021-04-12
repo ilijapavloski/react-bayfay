@@ -2,7 +2,7 @@ import axios from 'axios';
 import AuthUtils from "./utils/AuthUtils";
 
 const instance = axios.create({
-    baseURL: 'https://devuser.shoporservice.com/user',
+    baseURL: process.env.REACT_APP_API_ENDPOINT,
     headers: {
         'Access-Control-Allow-Origin': '*'
     }
