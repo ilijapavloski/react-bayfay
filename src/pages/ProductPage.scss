@@ -6,10 +6,14 @@
   }
   @media screen and (max-width: 992px) {
     .left-sidebar {
+      z-index: 4;
       margin-left: -250px;
+      transition: all ease-in 0.5s;
     }
     .right-sidebar {
+      z-index: 4;
       margin-right: -250px;
+      transition: all ease-in 0.5s;
     }
     .products-container {
       padding: 0;
@@ -56,7 +60,6 @@
     &.menu-show {
       .left-sidebar {
         margin-left: 0;
-        z-index: 4;
         transition: all ease-in 0.5s;
       }
     }
@@ -71,7 +74,6 @@
       }
       .right-sidebar {
         margin-right: 0;
-        z-index: 4;
         transition: all ease-in 0.5s;
       }
     }
