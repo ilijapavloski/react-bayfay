@@ -20,6 +20,8 @@
       position: fixed;
       left: 0;
       top: 44px;
+      z-index: 3;
+      transition: all ease-in-out .5s;
     }
     .page-collapse {
       position: fixed;
@@ -39,7 +41,7 @@
     .show + .navigation-menu {
       margin-left: 0;
       width: 220px;
-      z-index: 3;
+      transition: all ease-in-out .5s;
     }
   }
   @media screen and (max-width: 600px) {
