@@ -197,8 +197,19 @@ const PurchaseHistory = () => {
         setPage(1);
     };
 
+    const onClickCollapse = () => {
+        if (document.querySelector('.page-collapse.show')) {
+            document.querySelector('.page-collapse').classList.remove('show');
+        } else {
+            document.querySelector('.page-collapse').classList.add('show');
+        }
+    };
+
     return (
         <div className='payment-page-container'>
+            <div className="page-collapse">
+                <img onClick={() => onClickCollapse()} src={require('../../assets/images/arrow-right.png')} className='arrow-img' alt=""/>
+            </div>
             <NavigationMenu selectedMenuItem={2}/>
             {
                 activeView === ORDERS ?

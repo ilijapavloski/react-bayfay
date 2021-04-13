@@ -6,6 +6,84 @@
   margin: auto;
   display: flex;
   flex-direction: row;
+  // Ilija's work
+  .page-collapse {
+    display: none;
+  }
+  @media screen and (max-width: 992px) {
+    padding: 0 10px 0 0;
+  }
+  @media screen and (max-width: 786px) {
+    padding: 0 10px 0 30px;
+    .navigation-menu {
+      margin-left: -220px;
+      position: fixed;
+      left: 0;
+      top: 44px;
+    }
+    .page-collapse {
+      position: fixed;
+      left: 0;
+      width: 30px;
+      height: 60px;
+      display: flex;
+      z-index: 2;
+      img {
+        cursor: pointer;
+        margin-top: 30px;
+        width: 25px;
+        height: 25px;
+      }
+    }
+    .show + .navigation-menu {
+      margin-left: 0;
+      width: 220px;
+      z-index: 3;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .user-profile {
+      flex-wrap: wrap;
+      .pl-5 {
+        padding-left: 20px !important;
+      }
+      .w-25 {
+        width: 40% !important;
+        margin-left: auto;
+      }
+    }
+    .address-list {
+      .address-item-wrapper {
+        width: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .track-order-item > div:first-child {
+      flex-wrap: wrap;
+      .flex-mobile-row {
+        flex-direction: row !important;
+      }
+    }
+    .track-order-buttons {
+      .btn {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .saved-cards-container {
+      .saved-upi {
+        .pr-5 {
+          padding-right: 1.4rem !important;
+        }
+      }
+    }
+  }
+  // Ilija's work
 }
 
 .saved-card {

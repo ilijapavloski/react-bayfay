@@ -129,10 +129,21 @@ const Profile = () => {
         setValidateEmail(true);
     };
 
+    const onClickCollapse = () => {
+        if (document.querySelector('.page-collapse.show')) {
+            document.querySelector('.page-collapse').classList.remove('show');
+        } else {
+            document.querySelector('.page-collapse').classList.add('show');
+        }
+    };
+
     return (
         <div className='payment-page-container'>
+            <div className="page-collapse">
+                <img onClick={() => onClickCollapse()} src={require('../../assets/images/arrow-right.png')} className='arrow-img' alt=""/>
+            </div>
             <NavigationMenu selectedMenuItem={4}/>
-            <div className='d-flex flex-column px-2 py-4 w-100'>
+            <div className='d-flex flex-column px-2 py-4 w-100' onClick={() => document.querySelector('.page-collapse').classList.remove('show')}>
                 {userProfile ? <Aux>
                     <span className='profile-label'>Profile</span>
                     <div className='user-profile'>
@@ -183,7 +194,7 @@ const Profile = () => {
                                 </div> : null
                         }
                     </div>
-                    <div className='d-flex flex-wrap justify-content-between'>
+                    <div className='address-list d-flex flex-wrap justify-content-between'>
                         {userProfile?.address?.map(address => (
                             <div className='address-item-wrapper' key={address.id}>
                                 <AddressItem item={address} onDelete={onAddressDelete} onEdit={updateAddress}/>

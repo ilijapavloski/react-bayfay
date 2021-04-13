@@ -26,7 +26,7 @@ const OrderHistoryItems = ({openDetailsModal, loadNextPage, loadingNextPage, ope
     };
 
     return (
-        <div className="d-flex flex-column mt-4 w-100">
+        <div className="d-flex flex-column mt-4 w-100" onClick={() => document.querySelector('.page-collapse').classList.remove('show')}>
             {purchaseOrders.flatMap(order => order.orders).map(order => {
                 return <OrderHistoryItem order={order}
                                          openReviewModal={openReviewModal}

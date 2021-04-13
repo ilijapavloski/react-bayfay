@@ -244,10 +244,21 @@ const PaymentsPage = () => {
         }
     };
 
+    const onClickCollapse = () => {
+        if (document.querySelector('.page-collapse.show')) {
+            document.querySelector('.page-collapse').classList.remove('show');
+        } else {
+            document.querySelector('.page-collapse').classList.add('show');
+        }
+    };
+
     return (
         <div className='payment-page-container'>
+            <div className="page-collapse">
+                <img onClick={() => onClickCollapse()} src={require('../assets/images/arrow-right.png')} className='arrow-img' alt=""/>
+            </div>
             <NavigationMenu selectedMenuItem={3}/>
-            <div className='d-flex p-2 flex-column w-100'>
+            <div className='d-flex p-2 flex-column w-100' onClick={() => document.querySelector('.page-collapse').classList.remove('show')}>
                 <span className='font-size-1-4rem my-3 font-weight-bold'>Payment Methods</span>
                 {savedCards?.length > 0 ?
                     <span className='font-size-1rem my-2 font-weight-bold'>Saved Cards</span> : null}

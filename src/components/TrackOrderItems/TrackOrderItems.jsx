@@ -88,7 +88,7 @@ const TrackOrderItems = ({openItemDetails, openDetailsModal, loadNextPage, loadi
     };
 
     return (
-        <div className="d-flex flex-column mt-4 w-100">
+        <div className="d-flex flex-column mt-4 w-100" onClick={() => document.querySelector('.page-collapse').classList.remove('show')}>
             {trackOrders.flatMap(order => order.orders).map(order => {
                 return <TrackOrderItem order={order}
                                        key={order._id}

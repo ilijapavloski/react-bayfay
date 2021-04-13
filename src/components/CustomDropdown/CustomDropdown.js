@@ -32,7 +32,8 @@ const CustomDropdown = ({items, onSelect, preSelected, allValue}) => {
             setExpanded(item.name);
         }
         setSelectedItem(item.name);
-        onSelect(item.name)
+        onSelect(item.name);
+        document.querySelector('.products-page').classList.remove('menu-show');
     };
 
     return (

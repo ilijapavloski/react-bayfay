@@ -94,7 +94,7 @@ const OrderHistoryItem = ({order, openDetailsModal, setIsLoading, openItemDetail
                     </div>
                 </div>
 
-                <div className="d-flex flex-column align-content-center align-content-center flex-grow-1 mt-2">
+                <div className="d-flex flex-column align-content-center pl-2 flex-grow-1 mt-2">
                     <span
                         className='to-shop-name'>{billingDetails?.shop?.name}</span>
                     <span className="to-shop-address">

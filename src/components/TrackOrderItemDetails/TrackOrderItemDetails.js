@@ -82,7 +82,7 @@ const TrackOrderItemDetails = ({order, goBack, billingDetails, openDetailsModal,
                             <ImageLoader cssClass={'wh80px br-15px'} customSize={true}/>}
                     </div>
                 </div>
-                <div className="d-flex flex-column align-content-center align-content-center flex-grow-1">
+                <div className="d-flex flex-column align-content-center pl-2 flex-grow-1">
                 <span
                     className='to-shop-name pt-1'>{billingDetails && billingDetails.shop.name}</span>
                     <span className="to-shop-address">

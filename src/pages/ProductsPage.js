@@ -3,6 +3,7 @@ import LeftSidebar from "../components/LeftSidebar/LeftSidebar";
 import ProductList from "../components/ProductList/ProductList";
 import RightSidebar from "../components/RightSidebar/RightSidebar";
 import './HomePage.scss';
+import './ProductPage.scss';
 import {withRouter} from "react-router-dom";
 import useHttp from "../hooks/http";
 import ApiEndpoints from "../utils/ApiEndpoints";
@@ -841,12 +842,25 @@ const ProductsPage = (props) => {
         )
     };
 
+    const hanldeMenuToggle = () => {
+        if (document.querySelector('.products-page.menu-show')) {
+            document.querySelector('.products-page').classList.remove('menu-show');
+        } else {
+            document.querySelector('.products-page').classList.add('menu-show');
+        }
+    };
+
+    const handleClickContent = () => {
+        document.querySelector('.products-page').classList.remove('menu-show');
+        document.querySelector('main').classList.remove('cart-open');
+    }
+
     return (
         <Aux>
             {renderMetadata()}
-            <div>
+            <div className="products-page">
                 <LeftSidebar categories={categories} onCategorySelect={onCategorySelect} isPrivate={isPrivate}/>
-                <div className='products-container'>
+                <div className='products-container' onClick={() => handleClickContent()}>
                     {isPrivate &&
                     <div className='bg-white delivery-input-container'>
                         {renderDeliveryLocationInput()}
@@ -923,6 +937,10 @@ const ProductsPage = (props) => {
                              confirmButtonText={'Yes'} title='Delete Location'
                              message={'Are you sure you want to delete saved location?'}
                              onConfirm={onDeleteAddressConfirm}/>
+                <div className="menu-fixed" onClick={() => hanldeMenuToggle()}>
+                    &#9776;
+                    Menu
+                </div>
             </div>
         </Aux>
     );

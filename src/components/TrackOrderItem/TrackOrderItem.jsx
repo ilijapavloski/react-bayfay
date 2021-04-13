@@ -80,7 +80,7 @@ const TrackOrderItem = ({
     return (
         <div className="track-order-item d-flex flex-column justify-content-between">
             <div className="d-flex mb-1">
-                <div className="d-flex flex-column align-items-center flex-shrink-0">
+                <div className="d-flex flex-column align-items-center flex-shrink-0 flex-mobile-row">
                     <div className='p-2'>
                         {image ? <img src={image} alt="Test" className="track-order-item-shop-image"/> :
                             <ImageLoader cssClass={'wh80px br-15px'} customSize={true}/>}
@@ -93,7 +93,7 @@ const TrackOrderItem = ({
                     <BuzzCounter lastTimeBuzzed={lastTimeBuzzed} orderId={order._id}/>
                 </div>
 
-                <div className="d-flex flex-column align-content-center align-content-center flex-grow-1 mt-2">
+                <div className="d-flex flex-column align-content-center pl-2 flex-grow-1 mt-2">
                     <span
                         className='to-shop-name'>{billingDetails && billingDetails.shop.name}</span>
                     <span className="to-shop-address">

@@ -190,6 +190,7 @@ const Header = ({location, openScratchCard}) => {
                     isRecentShop: true
                 });
         }
+        document.querySelector('main').classList.add('cart-open');
     };
 
     const clearCartAndCloseDialog = () => {
@@ -251,7 +252,7 @@ const Header = ({location, openScratchCard}) => {
             <div className="collapse navbar-collapse align-items-center" id="navbarSupportedContent">
                 <ul className="navbar-nav flex-grow-1 pr-2">
                     <span className='flex-grow-1 d-flex flex-row'>
-                        <li className="nav-item px-3">
+                        <li className="nav-item px-3" onClick={() => handleClickSpace()}>
                             <NavLink
                                 className="nav-link text-black d-flex align-items-center"
                                 exact={true}
@@ -265,7 +266,7 @@ const Header = ({location, openScratchCard}) => {
                                 <span>Shopping</span>
                             </NavLink>
                         </li>
-                        <li className="nav-item px-3">
+                        <li className="nav-item px-3" onClick={() => handleClickSpace()}>
                             <button
                                 onClick={() => setShowOffersModal(true)}
                                 className="nav-link text-black d-flex align-items-center btn btn-light nav-button position-relative"
@@ -277,7 +278,7 @@ const Header = ({location, openScratchCard}) => {
                                     <span className='offers-count-label'>{offersCount}</span> : null}
                             </button>
                         </li>
-                        <li className="nav-item px-3">
+                        <li className="nav-item px-3" onClick={() => handleClickSpace()}>
                             <a
                                 className="nav-link text-black d-flex align-items-center"
                                 href={`${window.location.origin}/help`} target={'_blank'}
@@ -287,7 +288,7 @@ const Header = ({location, openScratchCard}) => {
                                 Help
                             </a>
                         </li>
-                        <li className='nav-item px-3 nav-item-trophy'>
+                        <li className='nav-item px-3 nav-item-trophy' onClick={() => handleClickSpace()}>
                             <span className='nav-button rewards-btn position-relative' onClick={onRewardClicked}>
                                 <img src={require('../../assets/images/reward_Icon.gif')} alt="help"
                                      className='nav-img-lg'/>
@@ -297,7 +298,7 @@ const Header = ({location, openScratchCard}) => {
                              </span>
                         </li>
                     </span>
-                    <li className="nav-item px-2">
+                    <li className="nav-item px-2" onClick={() => handleClickSpace()}>
                         <a
                             className="nav-link text-black d-flex align-items-center"
                             href={`${window.location.origin}/partner`} target={'_blank'}
@@ -307,7 +308,7 @@ const Header = ({location, openScratchCard}) => {
                             Business Enquiry
                         </a>
                     </li>
-                    <li className="nav-item px-2">
+                    <li className="nav-item px-2" onClick={() => handleClickSpace()}>
                         <button
                             onClick={() => setShowSupportModal(true)}
                             className="nav-link text-black d-flex align-items-center btn btn-light nav-button position-relative"
