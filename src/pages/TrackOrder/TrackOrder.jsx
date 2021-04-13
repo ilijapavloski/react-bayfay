@@ -216,7 +216,7 @@ const TrackOrder = () => {
             }
             {
                 activeView === ITEM_ORDER_DETAILS ?
-                    <div className='w-65'>
+                    <div className='w-65' onClick={() => document.querySelector('.page-collapse').classList.remove('show')}>
                         <TrackOrderItemDetails order={order} goBack={() => setActiveView(ORDERS)}
                                                openDetailsModal={openDetailsModal}
                                                updateProductStatus={updateProductStatus}

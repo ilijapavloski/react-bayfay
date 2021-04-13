@@ -81,3 +81,17 @@
     }
   }
 }
+
+.payment-page-container {
+  @media screen and (max-width: 992px) {
+    .w-65 {
+      width: 100% !important;
+      .track-products-details {
+        padding: 10px 0;
+        .d-flex.my-1 {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}

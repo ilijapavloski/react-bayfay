@@ -176,7 +176,7 @@ const OffersModal = ({closeModal, show, navigateToProductsPage}) => {
 
     return (
         <div onClick={closeModal}
-             className={`promo-code-container ${show ? 'promo-code-container-open' : 'promo-code-container-closed'}`}>
+             className={`promo-code-container ${show ? 'promo-code-container-open' : 'promo-code-container-closed'}`} onClick={() => document.querySelector('.page-collapse').classList.remove('show')}>
             <CSSTransition
                 mountOnEnter
                 unmountOnExit

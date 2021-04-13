@@ -55,7 +55,7 @@ const TrackOrderHelp = ({closeModal, show, orderId}) => {
 
     return (
         <div onClick={closeModal}
-             className={`promo-code-container billing-details-container ${show ? 'promo-code-container-open' : 'promo-code-container-closed'}`}>
+             className={`promo-code-container billing-details-container ${show ? 'promo-code-container-open' : 'promo-code-container-closed'}`} onClick={() => document.querySelector('.page-collapse').classList.remove('show')}>
             <CSSTransition
                 mountOnEnter
                 unmountOnExit
