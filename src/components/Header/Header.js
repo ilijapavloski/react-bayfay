@@ -190,7 +190,11 @@ const Header = ({location, openScratchCard}) => {
                     isRecentShop: true
                 });
         }
-        document.querySelector('main').classList.add('cart-open');
+        if (document.querySelector('main.cart-open')) {
+            document.querySelector('main').classList.remove('cart-open');
+        } else {
+            document.querySelector('main').classList.add('cart-open');
+        }
     };
 
     const clearCartAndCloseDialog = () => {

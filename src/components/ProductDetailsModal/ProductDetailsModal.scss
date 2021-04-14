@@ -2,13 +2,16 @@
 
 .modal-dialog.product-details-modal {
   max-width: 505px;
+  @media screen and (max-width: 540px) {
+    max-width: calc(100vw - 20px);
+  }
 }
 
 .custom-border {
   border-radius: 50%;
   border: 1px solid $red;
   color: red;
-  padding: 0 7px;
+  padding: 0 9px;
 }
 
 .image-lg-holder {
@@ -109,7 +112,7 @@
   border-radius: 50%;
   border: 1px solid $silver-text;
   color: $silver-text;
-  padding: 0 6px;
+  padding: 0 9px;
 }
 
 .report-btn {
