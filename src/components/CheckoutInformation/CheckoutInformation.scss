@@ -5,6 +5,13 @@
   max-width: unset !important;
   height: calc(100vh - 42px) !important;
   background-color: $checkout-dialog-bg;
+  .w-500px {
+    width: 100% !important;
+  }
+  .px-5 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }
 
 .modal-dialog.checkout-dialog {
